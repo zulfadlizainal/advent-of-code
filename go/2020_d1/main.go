@@ -48,6 +48,7 @@ func main() {
 	// Multiply 2 numbers if sum = 2020
 	var i int
 	var j int
+	var k int
 	var result int
 
 	for i = 0; i < len(list); i++ {
@@ -60,5 +61,20 @@ func main() {
 	}
 
 	fmt.Printf("Result part 1: %d\n", result)
+
+	// Multiply 3 numbers if sum = 2020
+
+	for i = 0; i < len(list); i++ {
+		for j = 0 + i; j < len(list); j++ {
+			for k = 0 + j; k < len(list); k++ {
+				if list[i]+list[j]+list[k] == 2020 {
+					result = list[i] * list[j] * list[k]
+					break
+				}
+			}
+		}
+	}
+
+	fmt.Printf("Result part 2: %d\n", result)
 
 }
