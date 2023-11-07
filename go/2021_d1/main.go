@@ -45,36 +45,15 @@ func main() {
 		list = append(list, num)
 	}
 
-	// Multiply 2 numbers if sum = 2020
-	var i int
-	var j int
-	var k int
-	var result int
+	var i int = 0
+	var result int = 0
 
-	for i = 0; i < len(list); i++ {
-		for j = 0 + i; j < len(list); j++ {
-			if list[i]+list[j] == 2020 {
-				result = list[i] * list[j]
-				break
-			}
+	for i = 0; i < len(list)-1; i++ {
+		if list[i+1] > list[i] {
+			result++
 		}
 	}
 
 	fmt.Printf("Result part 1: %d\n", result)
-
-	// Multiply 3 numbers if sum = 2020
-
-	for i = 0; i < len(list); i++ {
-		for j = 0 + i; j < len(list); j++ {
-			for k = 0 + j; k < len(list); k++ {
-				if list[i]+list[j]+list[k] == 2020 {
-					result = list[i] * list[j] * list[k]
-					break
-				}
-			}
-		}
-	}
-
-	fmt.Printf("Result part 2: %d\n", result)
 
 }
